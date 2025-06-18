@@ -17,7 +17,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "../ui/button"
 export default function CreateTaskCard() {
   return (
-    <Card className="w-full max-w-md p-8 flex flex-col">
+    <Card className="w-full p-8 flex flex-col">
       
       <h2 className="text-3xl font-bold text-primary">Create task</h2>
 

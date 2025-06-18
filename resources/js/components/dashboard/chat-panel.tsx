@@ -1,6 +1,6 @@
 "use client"
 
-import { Settings } from "lucide-react"
+import { Settings, User2 } from "lucide-react"
 import { useState } from "react"
 import { Card } from "../ui/card"
 const DUMMY_MESSAGES = [
@@ -40,16 +40,13 @@ export default function ChatPanel() {
   const [msg, setMsg] = useState("")
 
   return (
-    <Card className="w-full max-w-md mx-auto rounded-lg shadow-none p-4" style={{ minHeight: 720 }}>
+    <Card className="w-full shadow-none p-4" style={{ minHeight: 720 }}>
       {/* Header */}
-      <div className="flex items-center justify-between border-b border-[#232325] px-2 py-4 rounded-t-lg">
+      <div className="flex items-center justify-between border-b border-primary px-2 py-4 rounded-t-lg">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-[#232325] flex items-center justify-center">
+          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
             {/* User icon */}
-            <svg width={26} height={26} fill="none" viewBox="0 0 32 32">
-              <circle cx="16" cy="12" r="6" fill="#313139"/>
-              <rect x="6" y="22" width="20" height="8" rx="4" fill="#313139"/>
-            </svg>
+            <User2 size={24} className="text-white dark:text-black" />
           </div>
           <div>
             <div className="text-primary font-bold text-lg leading-none tracking-wide">LUCY EDWARDS</div>
@@ -65,11 +62,8 @@ export default function ChatPanel() {
       <div className="flex flex-col gap-3 py-4">
         {DUMMY_MESSAGES.map((item, idx) => (
           <div key={idx} className="border border-primary/50 rounded-sm px-3 py-3 flex items-start gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#232325] flex items-center justify-center flex-shrink-0 mt-1">
-              <svg width={24} height={24} fill="none" viewBox="0 0 32 32">
-                <circle cx="16" cy="12" r="6" fill="#313139"/>
-                <rect x="6" y="22" width="20" height="8" rx="4" fill="#313139"/>
-              </svg>
+            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
+            <User2 size={24} className="text-white dark:text-black" />
             </div>
             <div className="flex-1">
               <div className="flex gap-2 items-center">
