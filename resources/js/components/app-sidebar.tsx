@@ -10,7 +10,6 @@ import { LayoutGrid,
     Send, 
     FileText, 
     Clock  } from 'lucide-react';
-import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
     {
@@ -64,7 +63,7 @@ export function AppSidebar() {
                     <SidebarMenuItem>
                         <SidebarMenuButton size="lg" asChild>
                             <Link href="/dashboard" prefetch>
-                                <AppLogo />
+                              logo
                             </Link>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
