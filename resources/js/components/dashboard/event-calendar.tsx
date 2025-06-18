@@ -53,6 +53,7 @@ export default function EventCalendar() {
 
   return (
     <Card className="w-full  p-4 flex flex-col md:flex-row items-start gap-6 md:gap-0 relative ">
+     
       {/* Kiri: Event List */}
       <div className="flex flex-col w-full md:w-[420px] pr-6">
         <div className="flex items-center justify-center md:justify-start gap-2 mb-6">

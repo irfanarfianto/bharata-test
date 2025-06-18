@@ -2,7 +2,7 @@
 
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer, Tooltip } from "recharts";
 import { Card, CardContent } from "@/components/ui/card";
-
+import { EllipsisVertical } from "lucide-react";
 export interface ChartAreaAxesProps {
   readonly chartData: ReadonlyArray<{ month: string; value: number }>;
   readonly percentage?: string;
@@ -40,7 +40,11 @@ export function ChartAreaAxes({
 
   return (
     <Card>
-      <CardContent className="pt-6 px-6 pb-0 w-full h-full flex flex-col">
+      <CardContent className="relative pt-6 px-6 pb-0 w-full h-full flex flex-col">
+        {/* Dots */}
+        <button className="absolute right-5 top-5 p-2 text-[#595d64] hover:text-[#7de7e1]" aria-label="More">
+          <EllipsisVertical />
+        </button>
         <div className="mb-1 w-full">
           <span className="text-base text-primary dark:text-secondary font-semibold block truncate">{title}</span>
         </div>

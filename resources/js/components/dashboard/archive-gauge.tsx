@@ -2,6 +2,7 @@ import React from "react";
 import { PieChart, Pie, Cell } from "recharts";
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
+import { EllipsisVertical } from "lucide-react";
 // Three dots icon
 function DotsIcon() {
   return (
@@ -89,7 +90,7 @@ export default function ArchiveAndGaugeCards() {
       <div className="relative flex-1 min-w-[280px] px-9 py-8 flex flex-col items-center justify-between">
         {/* Dots */}
         <button className="absolute right-5 top-5 p-2 text-[#595d64] hover:text-[#7de7e1]" aria-label="More">
-          <DotsIcon />
+          <EllipsisVertical />
         </button>
         <div className="w-full mb-4">
           <h2 className="text-[2rem] font-extrabold text-primary mb-3">Archives</h2>

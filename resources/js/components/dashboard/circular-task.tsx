@@ -1,6 +1,7 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
+import { EllipsisVertical } from "lucide-react"
 import { PieChart, Pie, Sector } from "recharts"
 import { PieSectorDataItem } from "recharts/types/polar/Pie"
 
@@ -31,6 +32,10 @@ const stat3Remain = 17;
 export default function DashboardCircularStatsRecharts() {
   return (
     <Card className="rounded-md px-2 py-10 w-full relative">
+      {/* Dots */}
+      <button className="absolute right-5 top-5 p-2 text-[#595d64] hover:text-[#7de7e1]" aria-label="More">
+          <EllipsisVertical />
+        </button>
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
         {/* Stat 1: Solid */}
         <div className="flex flex-col items-center flex-1 min-w-[120px]">

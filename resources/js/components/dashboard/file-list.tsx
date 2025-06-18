@@ -8,6 +8,7 @@ import {
  } from "@/components/ui/table";
 import { Card } from "../ui/card";
 import { Button } from "../ui/button";
+import { EllipsisVertical } from "lucide-react";
  
  const files = [
    {
@@ -38,7 +39,11 @@ import { Button } from "../ui/button";
  
  export default function FileListTable() {
    return (
-     <Card className="px-6 py-4">
+     <Card className="relative px-6 py-4">
+      {/* Dots */}
+      <button className="absolute right-5 top-5 p-2 text-[#595d64] hover:text-[#7de7e1]" aria-label="More">
+          <EllipsisVertical />
+        </button>
        <Table className="w-full">
          <TableHeader>
            <TableRow>

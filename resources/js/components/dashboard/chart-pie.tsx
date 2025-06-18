@@ -2,6 +2,7 @@
 
 import { Pie, PieChart, Sector, ResponsiveContainer, Tooltip } from "recharts"
 import { Card, CardContent } from "@/components/ui/card"
+import { EllipsisVertical } from "lucide-react"
 
 export interface PieSegmentData {
   name: string
@@ -16,7 +17,11 @@ export interface ChartPieSegmentProps {
 export function ChartPieSegment({ data }: Readonly<ChartPieSegmentProps>) {
   return (
     <Card className="flex flex-col">
-      <CardContent className="pt-6 px-6 pb-6 flex flex-col items-center justify-start flex-1">
+      <CardContent className="relative pt-6 px-6 pb-6 flex flex-col items-center justify-start flex-1">
+      {/* Dots */}
+      <button className="absolute right-5 top-5 p-2 text-[#595d64] hover:text-[#7de7e1]" aria-label="More">
+          <EllipsisVertical />
+        </button>
         <div className="w-full flex flex-col items-center">
           {/* Chart Pie di tengah */}
           <div className="w-full flex justify-center items-center" style={{ minHeight: 220 }}>
