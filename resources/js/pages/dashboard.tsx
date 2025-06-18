@@ -1,35 +1,56 @@
-import { PlaceholderPattern } from '@/components/ui/placeholder-pattern';
 import AppLayout from '@/layouts/app-layout';
-import { type BreadcrumbItem } from '@/types';
 import { Head } from '@inertiajs/react';
 
+import SystemAlert from "@/components/dashboard/system-alert";
+import EventCalender from "@/components/dashboard/event-calendar";
+import FileList from "@/components/dashboard/file-list";
+import DashboardCircularStats from '@/components/dashboard/circular-task';
+import ArchiveAndGaugeCards from '@/components/dashboard/archive-gauge';
+import DashboardAreaChartSection from '@/components/dashboard/dash-chart';
+import DashboardChartBar from '@/components/dashboard/dash-chart-bar';
+import DashboardPieChartSection from '@/components/dashboard/dash-chart-pie';
+import CreateTaskCard from '@/components/dashboard/create-task';
+import ChatPanel from '@/components/dashboard/chat-panel';
+import RatedTaskCard from '@/components/dashboard/rate-card';
+type BreadcrumbItem = {
+  title: string;
+  href: string;
+};
+
 const breadcrumbs: BreadcrumbItem[] = [
-    {
-        title: 'Dashboard',
-        href: '/dashboard',
-    },
+  {
+    title: "Dashboard",
+    href: "/dashboard",
+  },
 ];
 
 export default function Dashboard() {
-    return (
-        <AppLayout breadcrumbs={breadcrumbs}>
-            <Head title="Dashboard" />
-            <div className="flex h-full flex-1 flex-col gap-4 rounded-xl p-4 overflow-x-auto">
-                <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-                    <div className="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
-                        <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
-                    </div>
-                    <div className="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
-                        <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
-                    </div>
-                    <div className="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
-                        <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
-                    </div>
-                </div>
-                <div className="relative min-h-[100vh] flex-1 overflow-hidden rounded-xl border border-sidebar-border/70 md:min-h-min dark:border-sidebar-border">
-                    <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
-                </div>
+  return (
+    <>
+      <Head title="Dashboard" />
+      <AppLayout breadcrumbs={breadcrumbs}>
+        <div className="flex flex-col md:flex-row gap-4 rounded-xl p-4 items-start">
+          {/* Kiri */}
+          <div className="flex flex-col gap-4 flex-[2] min-w-0 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <DashboardAreaChartSection />
+                <DashboardChartBar />
             </div>
-        </AppLayout>
-    );
+            <SystemAlert />
+            <EventCalender />
+            <FileList />
+            <DashboardCircularStats />
+            <ArchiveAndGaugeCards />
+          </div>
+          {/* Kanan */}
+          <div className="flex flex-col gap-4 flex-[1.1] min-w-0 w-full md:max-w-[400px]">
+          <DashboardPieChartSection />
+          <CreateTaskCard />
+          <ChatPanel />
+          <RatedTaskCard />
+          </div>
+        </div>
+      </AppLayout>
+    </>
+  );
 }
