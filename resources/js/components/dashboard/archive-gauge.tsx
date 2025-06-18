@@ -97,7 +97,7 @@ export default function ArchiveAndGaugeCards() {
         <div className="my-3">
         {/* image asset */}
         <img
-          src="/images/illustration.png"
+          src="/images/Illustration.png"
           alt="Archive Illustration"
           className="mx-auto"
         />
