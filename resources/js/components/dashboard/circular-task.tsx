@@ -61,7 +61,7 @@ export default function DashboardCircularStatsRecharts() {
             />
           </PieChart>
           <div className="mt-4 text-center">
-            <div className="font-extrabold text-2xl text-[#232833] mb-1" style={{ lineHeight: 1 }}>
+            <div className="font-extrabold text-2xl text-primary dark:text-primary mb-1" style={{ lineHeight: 1 }}>
               12/29
             </div>
             <div className="text-sm text-[#9397a3] tracking-wide" style={{ fontWeight: 500 }}>
@@ -93,7 +93,7 @@ export default function DashboardCircularStatsRecharts() {
             />
           </PieChart>
           <div className="mt-4 text-center">
-            <div className="font-extrabold text-2xl text-[#232833] mb-1" style={{ lineHeight: 1 }}>
+            <div className="font-extrabold text-2xl text-primary dark:text-primary  mb-1" style={{ lineHeight: 1 }}>
               60%
             </div>
             <div className="text-sm text-[#9397a3] tracking-wide" style={{ fontWeight: 500 }}>
@@ -150,7 +150,7 @@ export default function DashboardCircularStatsRecharts() {
             />
           </PieChart>
           <div className="mt-4 text-center">
-            <div className="font-extrabold text-2xl text-[#232833] mb-1" style={{ lineHeight: 1 }}>
+            <div className="font-extrabold text-2xl text-primary dark:text-primary mb-1" style={{ lineHeight: 1 }}>
               Bacon
             </div>
             <div className="text-sm text-[#9397a3] tracking-wide" style={{ fontWeight: 500 }}>
